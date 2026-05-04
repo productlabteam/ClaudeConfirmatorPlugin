@@ -1,0 +1,56 @@
+{
+  "lang.name": "English",
+  "lang.flag": "🇬🇧",
+
+  "bot.welcome": "👋 Welcome to *Claude Confirmator*.\nThis bot delivers tool-permission requests from your Claude Code session and lets you approve or reject them remotely.",
+  "bot.welcome_unpaired": "Open Claude Code in your terminal and run `/confirm-link` — it will give you a personal start link.",
+  "bot.language_prompt": "Pick your language:",
+  "bot.language_changed": "✅ Language set to *{lang}*.",
+  "bot.linked": "✅ Linked to your Claude Code session.\nYou will receive permission requests here. Send /help for more.",
+  "bot.already_linked": "You are already linked. Use /unlink first if you want to switch devices.",
+  "bot.invalid_token": "❌ This link is invalid or has expired. In your terminal run `/confirm-link` to get a fresh one.",
+  "bot.unlinked": "🔓 Unlinked. To link again, run `/confirm-link` in Claude Code.",
+  "bot.paused": "⏸ Notifications paused. Send /resume to continue.",
+  "bot.resumed": "▶️ Notifications resumed.",
+  "bot.help": "*Claude Confirmator commands*\n/language — change language\n/pause — stop receiving requests\n/resume — start receiving requests again\n/unlink — disconnect from Claude Code\n/help — this message",
+
+  "bot.notify.title": "🤖 *Claude wants to run*",
+  "bot.notify.tool": "*Tool:* `{tool}`",
+  "bot.notify.cwd": "*Cwd:* `{cwd}`",
+  "bot.notify.session": "*Session:* `{session}`",
+  "bot.notify.comment_prompt": "✏️ Send your comment as the next message.",
+  "bot.notify.approved": "✅ *Approved*",
+  "bot.notify.rejected": "❌ *Rejected*",
+  "bot.notify.commented": "💬 *Comment:* {text}",
+  "bot.notify.timeout": "⌛ *No response — Claude fell back to local prompt*",
+  "bot.notify.released": "⏸ *Paused — Claude fell back to local prompt*",
+
+  "bot.btn.approve": "✅ Approve",
+  "bot.btn.reject": "❌ Reject",
+  "bot.btn.comment": "💬 Comment",
+
+  "bot.cmd.language": "Change language",
+  "bot.cmd.pause": "Pause notifications",
+  "bot.cmd.resume": "Resume notifications",
+  "bot.cmd.unlink": "Disconnect from Claude Code",
+  "bot.cmd.help": "Show help",
+
+  "bot.broadcast.footer": "— Claude Confirmator team",
+
+  "hook.pair_required": "Open Telegram and start the bot to link this Claude Code session:\n{link}\nWe'll wait — open the link, pick your language, then re-run the same command.",
+  "hook.waiting": "Waiting for confirmation in Telegram (timeout: {timeout}s)…",
+  "hook.approved": "Approved via Telegram",
+  "hook.rejected": "Rejected via Telegram",
+  "hook.timeout": "No response in Telegram — falling back to local prompt",
+  "hook.error.network": "Network error talking to Claude Confirmator API — falling back to local prompt",
+  "hook.error.api": "Claude Confirmator API error — falling back to local prompt",
+
+  "install.title": "Claude Confirmator — setup",
+  "install.choose_mode": "Choose mode:\n  1) shared  — use the public @claudeconfirmbot (recommended)\n  2) self-hosted — your own bot from @BotFather\nSelect [1]: ",
+  "install.choose_lang": "Choose interface language for hook output:\n  1) English\n  2) Русский\n  3) 中文\nSelect [1]: ",
+  "install.shared_done": "✓ Shared mode configured. Run `/confirm-link` in Claude Code to pair with Telegram.",
+  "install.self_token": "Telegram bot token (from @BotFather): ",
+  "install.self_chat": "Your chat ID (numeric, get from @userinfobot): ",
+  "install.self_timeout": "Timeout seconds [300]: ",
+  "install.self_done": "✓ Self-hosted mode configured. Test message sent to Telegram."
+}

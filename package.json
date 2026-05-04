@@ -1,0 +1,20 @@
+{
+  "name": "claude-confirmator",
+  "version": "1.0.0",
+  "description": "Approve Claude Code tool requests via Telegram. Three taps on your phone — Approve, Reject, Comment. Shared bot @claudeconfirmbot or your own.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "bin": {
+    "claude-confirmator-install": "./bin/install.mjs",
+    "claude-confirmator-test": "./bin/test-bot.mjs",
+    "claude-confirmator": "./bin/cli.mjs"
+  },
+  "scripts": {
+    "install-hook": "node bin/install.mjs",
+    "test-bot": "node bin/test-bot.mjs"
+  },
+  "keywords": ["claude-code", "telegram", "permissions", "hook", "i18n"],
+  "license": "MIT",
+  "homepage": "https://github.com/alexeysorochan/claude-confirmator-plugin",
+  "repository": { "type": "git", "url": "https://github.com/alexeysorochan/claude-confirmator-plugin.git" }
+}

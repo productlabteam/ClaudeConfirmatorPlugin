@@ -1,0 +1,14 @@
+{
+  "name": "claude-confirmator-marketplace",
+  "owner": { "name": "Claude Confirmator" },
+  "plugins": [
+    {
+      "name": "claude-confirmator",
+      "source": "./",
+      "description": "Approve Claude Code tool requests on Telegram (EN/RU/ZH).",
+      "version": "1.0.0",
+      "category": "permissions",
+      "keywords": ["telegram", "approval", "mobile", "i18n"]
+    }
+  ]
+}

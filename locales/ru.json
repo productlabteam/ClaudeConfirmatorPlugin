@@ -1,0 +1,56 @@
+{
+  "lang.name": "Русский",
+  "lang.flag": "🇷🇺",
+
+  "bot.welcome": "👋 Это *Claude Confirmator*.\nБот пересылает запросы на разрешение инструментов из вашей сессии Claude Code и позволяет одобрять или отклонять их удалённо.",
+  "bot.welcome_unpaired": "Откройте Claude Code в терминале и выполните `/confirm-link` — он выдаст вам персональную ссылку для запуска бота.",
+  "bot.language_prompt": "Выберите язык:",
+  "bot.language_changed": "✅ Язык установлен: *{lang}*.",
+  "bot.linked": "✅ Подключено к вашей сессии Claude Code.\nЗдесь будут приходить запросы. Команда /help — справка.",
+  "bot.already_linked": "Вы уже подключены. Сначала /unlink, если хотите сменить устройство.",
+  "bot.invalid_token": "❌ Ссылка недействительна или просрочена. В терминале выполните `/confirm-link` для новой.",
+  "bot.unlinked": "🔓 Отключено. Чтобы подключиться снова — `/confirm-link` в Claude Code.",
+  "bot.paused": "⏸ Уведомления приостановлены. /resume — возобновить.",
+  "bot.resumed": "▶️ Уведомления возобновлены.",
+  "bot.help": "*Команды Claude Confirmator*\n/language — сменить язык\n/pause — приостановить уведомления\n/resume — возобновить\n/unlink — отключить от Claude Code\n/help — это сообщение",
+
+  "bot.notify.title": "🤖 *Claude хочет выполнить*",
+  "bot.notify.tool": "*Инструмент:* `{tool}`",
+  "bot.notify.cwd": "*Каталог:* `{cwd}`",
+  "bot.notify.session": "*Сессия:* `{session}`",
+  "bot.notify.comment_prompt": "✏️ Пришлите комментарий следующим сообщением.",
+  "bot.notify.approved": "✅ *Одобрено*",
+  "bot.notify.rejected": "❌ *Отклонено*",
+  "bot.notify.commented": "💬 *Комментарий:* {text}",
+  "bot.notify.timeout": "⌛ *Нет ответа — Claude переключился на локальный промпт*",
+  "bot.notify.released": "⏸ *Пауза — Claude переключился на локальный промпт*",
+
+  "bot.btn.approve": "✅ Одобрить",
+  "bot.btn.reject": "❌ Отклонить",
+  "bot.btn.comment": "💬 Комментарий",
+
+  "bot.cmd.language": "Сменить язык",
+  "bot.cmd.pause": "Приостановить уведомления",
+  "bot.cmd.resume": "Возобновить уведомления",
+  "bot.cmd.unlink": "Отключить от Claude Code",
+  "bot.cmd.help": "Справка",
+
+  "bot.broadcast.footer": "— команда Claude Confirmator",
+
+  "hook.pair_required": "Откройте Telegram и запустите бота для связи этой сессии Claude Code:\n{link}\nМы подождём — откройте ссылку, выберите язык и повторите ту же команду.",
+  "hook.waiting": "Ждём подтверждения в Telegram (таймаут: {timeout}с)…",
+  "hook.approved": "Одобрено через Telegram",
+  "hook.rejected": "Отклонено через Telegram",
+  "hook.timeout": "Нет ответа в Telegram — переключаемся на локальный промпт",
+  "hook.error.network": "Сетевая ошибка с API Claude Confirmator — переключаемся на локальный промпт",
+  "hook.error.api": "Ошибка API Claude Confirmator — переключаемся на локальный промпт",
+
+  "install.title": "Claude Confirmator — настройка",
+  "install.choose_mode": "Выберите режим:\n  1) shared  — общий бот @claudeconfirmbot (рекомендуется)\n  2) self-hosted — ваш собственный бот из @BotFather\nВыбор [1]: ",
+  "install.choose_lang": "Выберите язык интерфейса для hook:\n  1) English\n  2) Русский\n  3) 中文\nВыбор [2]: ",
+  "install.shared_done": "✓ Режим shared настроен. В Claude Code выполните `/confirm-link` для связки с Telegram.",
+  "install.self_token": "Токен Telegram-бота (от @BotFather): ",
+  "install.self_chat": "Ваш chat ID (число, узнать у @userinfobot): ",
+  "install.self_timeout": "Таймаут в секундах [300]: ",
+  "install.self_done": "✓ Self-hosted режим настроен. Тестовое сообщение отправлено в Telegram."
+}

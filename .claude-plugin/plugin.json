@@ -1,0 +1,19 @@
+{
+  "name": "claude-confirmator",
+  "version": "1.0.0",
+  "description": "Approve Claude Code tool requests via Telegram. Get an interactive card on your phone for every Bash / WebFetch / WebSearch — three taps: Approve, Reject, Comment.",
+  "author": {
+    "name": "Claude Confirmator",
+    "url": "https://github.com/alexeysorochan/claude-confirmator-plugin"
+  },
+  "homepage": "https://github.com/alexeysorochan/claude-confirmator-plugin",
+  "license": "MIT",
+  "keywords": [
+    "telegram",
+    "permissions",
+    "hooks",
+    "remote-approval",
+    "mobile",
+    "i18n"
+  ]
+}
