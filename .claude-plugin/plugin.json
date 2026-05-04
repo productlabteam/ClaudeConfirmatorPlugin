@@ -1,6 +1,6 @@
 {
   "name": "claude-confirmator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Approve Claude Code tool requests via Telegram. Get an interactive card on your phone for every Bash / WebFetch / WebSearch — three taps: Approve, Reject, Comment.",
   "author": {
     "name": "Claude Confirmator",

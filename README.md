@@ -60,7 +60,7 @@ Provide bot token (BotFather) and your numeric chat ID (@userinfobot). Then `/co
   "timeoutSeconds": 300,
   "redactSecrets": true,
   "shared": {
-    "api_base": "https://api.claudeconfirm.bot",
+    "api_base": "https://claudeconfirm.productlab.one",
     "client_id": "...",
     "client_secret": "...",
     "paired": true
@@ -73,7 +73,7 @@ Old configs from v0.x (`{ botToken, chatId, … }`) are migrated automatically i
 
 ## Privacy
 
-In **shared** mode the plugin sends to `api.claudeconfirm.bot`:
+In **shared** mode the plugin sends to `claudeconfirm.productlab.one`:
 - the tool name, working directory, and tool input (with secrets redacted client-side when `redactSecrets: true` — patterns: `sk-…`, `xoxb-…`, `AKIA…`, `Bearer …`, `ghp_…`, `gho_…`).
 - a `client_id` you generated on first run (no email, no IP retention beyond rate limiting).
 
