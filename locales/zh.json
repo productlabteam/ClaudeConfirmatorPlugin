@@ -1,7 +1,6 @@
 {
   "lang.name": "中文",
   "lang.flag": "🇨🇳",
-
   "bot.welcome": "👋 欢迎使用 *Claude Confirmator*。\n本机器人会转发您 Claude Code 会话中的工具权限请求，您可以远程批准或拒绝。",
   "bot.welcome_unpaired": "请在终端中打开 Claude Code 并执行 `/confirm-link`，它会为您生成一个个人启动链接。",
   "bot.language_prompt": "请选择语言：",
@@ -13,7 +12,6 @@
   "bot.paused": "⏸ 通知已暂停。发送 /resume 继续。",
   "bot.resumed": "▶️ 通知已恢复。",
   "bot.help": "*Claude Confirmator 命令*\n/language — 更改语言\n/pause — 暂停通知\n/resume — 恢复通知\n/unlink — 断开与 Claude Code 的连接\n/help — 此消息",
-
   "bot.notify.title": "🤖 *Claude 想要执行*",
   "bot.notify.tool": "*工具：* `{tool}`",
   "bot.notify.cwd": "*目录：* `{cwd}`",
@@ -24,19 +22,15 @@
   "bot.notify.commented": "💬 *评论：* {text}",
   "bot.notify.timeout": "⌛ *无响应——Claude 已切换到本地提示*",
   "bot.notify.released": "⏸ *已暂停——Claude 已切换到本地提示*",
-
   "bot.btn.approve": "✅ 批准",
   "bot.btn.reject": "❌ 拒绝",
   "bot.btn.comment": "💬 评论",
-
   "bot.cmd.language": "更改语言",
   "bot.cmd.pause": "暂停通知",
   "bot.cmd.resume": "恢复通知",
   "bot.cmd.unlink": "断开 Claude Code 连接",
   "bot.cmd.help": "显示帮助",
-
   "bot.broadcast.footer": "— Claude Confirmator 团队",
-
   "hook.pair_required": "打开 Telegram 并启动机器人以连接此 Claude Code 会话：\n{link}\n我们会等待——打开链接，选择语言，然后重新运行相同的命令。",
   "hook.waiting": "正在等待 Telegram 中的确认（超时：{timeout}秒）…",
   "hook.approved": "已通过 Telegram 批准",
@@ -44,13 +38,7 @@
   "hook.timeout": "Telegram 无响应——切换到本地提示",
   "hook.error.network": "Claude Confirmator API 网络错误——切换到本地提示",
   "hook.error.api": "Claude Confirmator API 错误——切换到本地提示",
-
   "install.title": "Claude Confirmator — 设置",
-  "install.choose_mode": "选择模式：\n  1) shared  — 使用公共 @claudeconfirmbot（推荐）\n  2) self-hosted — 您自己的 @BotFather 机器人\n选择 [1]: ",
   "install.choose_lang": "选择 hook 输出的界面语言：\n  1) English\n  2) Русский\n  3) 中文\n选择 [3]: ",
-  "install.shared_done": "✓ 已配置 shared 模式。在 Claude Code 中运行 `/confirm-link` 与 Telegram 配对。",
-  "install.self_token": "Telegram 机器人令牌（来自 @BotFather）: ",
-  "install.self_chat": "您的 chat ID（数字，从 @userinfobot 获取）: ",
-  "install.self_timeout": "超时秒数 [300]: ",
-  "install.self_done": "✓ 已配置 self-hosted 模式。测试消息已发送到 Telegram。"
+  "install.shared_done": "✓ 已配置 shared 模式。在 Claude Code 中运行 `/confirm-link` 与 Telegram 配对。"
 }

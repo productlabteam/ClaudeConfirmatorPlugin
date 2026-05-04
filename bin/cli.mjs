@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Unified CLI behind the slash commands. Subcommands: link, language, mode, status.
+// Unified CLI behind the slash commands. Subcommands: link, language, status.
 
 import { loadConfig, saveConfig } from "../lib/config.mjs";
 import { ensurePaired, refreshPairStatus, rotateDeepLink, buildDeepLink, DEFAULT_API_BASE } from "../lib/pairing.mjs";
@@ -10,21 +10,15 @@ const [, , sub, ...rest] = process.argv;
 async function cmdLink() {
   const reset = rest.includes("--reset");
   let config = await loadConfig();
-  if (config.mode !== "shared") {
-    console.log("Mode is 'self-hosted' — pairing not applicable. Switch first: /confirm-mode shared");
-    return;
-  }
   const { config: c1 } = await ensurePaired(config);
   config = c1;
 
   if (reset) {
     const link = await rotateDeepLink(config);
-    console.log("Fresh pair link:");
-    console.log("  " + link);
+    console.log("Fresh pair link:\n  " + link);
     return;
   }
 
-  // Refresh status from server.
   let status = null;
   try { status = await refreshPairStatus(config); } catch { /* ignore */ }
 
@@ -59,47 +53,18 @@ async function cmdLanguage() {
   console.log(await t("bot.language_changed", want, { lang: want }));
 }
 
-async function cmdMode() {
-  const config = await loadConfig();
-  const want = (rest[0] ?? "").toLowerCase();
-  if (!want) {
-    console.log(`Current mode: ${config.mode}`);
-    console.log("Switch with: /confirm-mode shared   |   /confirm-mode self-hosted");
-    return;
-  }
-  if (want !== "shared" && want !== "self-hosted") {
-    console.error(`Unknown mode: ${want}`);
-    process.exit(1);
-  }
-  if (want === "self-hosted" && (!config.selfHosted?.botToken || config.selfHosted?.chatId == null)) {
-    console.error("Self-hosted mode requires botToken and chatId.");
-    console.error("Run the installer:  node ${CLAUDE_PLUGIN_ROOT}/bin/install.mjs --self-hosted");
-    process.exit(1);
-  }
-  config.mode = want;
-  await saveConfig(config);
-  console.log(`✓ Mode is now: ${want}`);
-}
-
 async function cmdStatus() {
   const config = await loadConfig();
-  console.log(`Mode:     ${config.mode}`);
   console.log(`Language: ${config.language}`);
   console.log(`Tools:    ${config.tools.join(", ")}`);
   console.log(`Timeout:  ${config.timeoutSeconds}s`);
   console.log(`Redact:   ${config.redactSecrets}`);
-  if (config.mode === "shared") {
-    const s = config.shared ?? {};
-    console.log(`API:      ${s.api_base || DEFAULT_API_BASE}`);
-    console.log(`Client:   ${s.client_id ?? "(not initialized)"}`);
-    console.log(`Paired:   ${s.paired ? "yes" : "no"}`);
-    if (!s.paired && s.pair_token) {
-      console.log(`Link:     ${s.deep_link || buildDeepLink(s.pair_token)}`);
-    }
-  } else {
-    const sh = config.selfHosted ?? {};
-    console.log(`Bot:      ${sh.botToken ? "configured" : "(missing)"}`);
-    console.log(`Chat:     ${sh.chatId ?? "(missing)"}`);
+  const s = config.shared ?? {};
+  console.log(`API:      ${s.api_base || DEFAULT_API_BASE}`);
+  console.log(`Client:   ${s.client_id ?? "(not initialized)"}`);
+  console.log(`Paired:   ${s.paired ? "yes" : "no"}`);
+  if (!s.paired && s.pair_token) {
+    console.log(`Link:     ${s.deep_link || buildDeepLink(s.pair_token)}`);
   }
 }
 
@@ -107,10 +72,9 @@ async function main() {
   switch (sub) {
     case "link":     return cmdLink();
     case "language": return cmdLanguage();
-    case "mode":     return cmdMode();
     case "status":   return cmdStatus();
     default:
-      console.error("Usage: cli.mjs <link|language|mode|status> [args]");
+      console.error("Usage: cli.mjs <link|language|status> [args]");
       process.exit(1);
   }
 }

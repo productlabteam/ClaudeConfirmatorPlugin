@@ -1,7 +1,7 @@
 {
   "name": "claude-confirmator",
-  "version": "1.0.1",
-  "description": "Approve Claude Code tool requests via Telegram. Three taps on your phone — Approve, Reject, Comment. Shared bot @claudeconfirmbot or your own.",
+  "version": "1.1.0",
+  "description": "Approve Claude Code tool requests via Telegram. Three taps on your phone — Approve, Reject, Comment.",
   "type": "module",
   "engines": { "node": ">=20" },
   "bin": {
